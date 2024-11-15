@@ -1,3 +1,4 @@
+
 interface Sentimiento{
     public void amar();
     public void odiar();
@@ -36,13 +37,24 @@ class Persona implements Sentimiento{
         void cargar(double cantidad){
             saldo = saldo + cantidad;
         }
+        void abonar(double cantidad){
+            saldo=saldo+cantidad;
+        }
+    }    
+    class banco{
+        String nombre;
+        String direccion;
+        public void saludar(){
+            System.out.println("Hola, bienvenidos al banco");
+        }
+    }
     class Cliente extends Persona{
         int numero;
         Cuenta cuenta;
         Cliente(String nombre, int edad, string apellidos, bloolean genero, char sexo){
             super(nombre, edad, apellidos,genero, sexo );
         }
-    }
+    
 
     }
 
